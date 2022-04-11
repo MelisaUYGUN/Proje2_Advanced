@@ -45,8 +45,19 @@ ters arrayi yazdır
 
      //        Koda burdan başlayın
 
+        System.out.println(Arrays.toString(reverseArr(useThisArray)));
 
 
+    }
+
+    private static String[] reverseArr(String[] useThisArray) {
+        String[] reverseArr = new String[useThisArray.length];
+        for (int i = 0; i < useThisArray.length; i++) {
+            reverseArr[i] = useThisArray[useThisArray.length-1-i];
+        }
+
+
+        return reverseArr;
     }
 
 }
