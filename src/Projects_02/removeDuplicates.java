@@ -63,14 +63,14 @@ public class removeDuplicates {
         }
 
         List<Integer>nonDuplicated = new ArrayList<>();
-        for (int i = 0; i < useThisArray.length; i++) {
-            if (!nonDuplicated.contains(useThisArray[i])) {
-                nonDuplicated.add(useThisArray[i]);
+        for (int j : useThisArray) {
+            if (!nonDuplicated.contains(j)) {
+                nonDuplicated.add(j);
             }
-        }int[] useThisLine = new int[nonDuplicated.size()];
+        }
+        int[] useThisLine = new int[nonDuplicated.size()];
         for (int i = 0; i < useThisLine.length; i++) {
             useThisLine[i]=nonDuplicated.get(i);
-
         }
         System.out.println(Arrays.toString(useThisLine));
 
