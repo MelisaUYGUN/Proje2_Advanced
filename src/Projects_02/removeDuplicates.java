@@ -1,6 +1,8 @@
 package Projects_02;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class removeDuplicates {
@@ -53,21 +55,32 @@ public class removeDuplicates {
 
         int[] useThisArray = new int[arr.length];
 
-        for(int i = 0 ; i < useThisArray.length ; i++){
+        for (int i = 0; i < useThisArray.length; i++) {
 
             int num = Integer.parseInt(arr[i]);
 
             useThisArray[i] = num;
+        }
+
+        List<Integer>nonDuplicated = new ArrayList<>();
+        for (int i = 0; i < useThisArray.length; i++) {
+            if (!nonDuplicated.contains(useThisArray[i])) {
+                nonDuplicated.add(useThisArray[i]);
+            }
+        }int[] useThisLine = new int[nonDuplicated.size()];
+        for (int i = 0; i < useThisLine.length; i++) {
+            useThisLine[i]=nonDuplicated.get(i);
 
         }
+        System.out.println(Arrays.toString(useThisLine));
 
 
 //        code start here
 //        dont change anything before this line
 //        your Array is useThisLine
 
-      // Kodlamaya burdan başla.bu satırdan önceki satirlarda hicbirşeyi  degiştirme.
-      //   useThisLine arrayini kullan
+        // Kodlamaya burdan başla.bu satırdan önceki satirlarda hicbirşeyi  degiştirme.
+        //   useThisLine arrayini kullan
 
     }
 
