@@ -1,5 +1,6 @@
 package Projects_02;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class diffBetweenMaxMin {
@@ -50,7 +51,27 @@ public class diffBetweenMaxMin {
     // Your code start here. Don't remove or change anything before this line. Your array is -> useThisArray in line 27
     // Kodlamaya burdan başla.Bu satırdan önceki satırlarda hiçbirşeyi kaldırma ve degiştirme. Kullanacağın array 27.ci satırda  --> useThisArray
 
+        System.out.println("Arraydeki en büyük ve en küçük öğeler arasındaki fark : "
+                + arraydekiEnBuyukSAyiIleEnKucukSayiArasindakiFarkiBul(useThisArray));
+
+
     }
+
+    private static int arraydekiEnBuyukSAyiIleEnKucukSayiArasindakiFarkiBul(int[] arr) {
+
+        int enBuyuk=arr[0];
+        int enKucuk=arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            enBuyuk=Math.max(enBuyuk,arr[i]);
+            enKucuk=Math.min(enKucuk,arr[i]);
+
+
+        }
+        return enBuyuk-enKucuk;
+
+    }
+
 
 }
 
