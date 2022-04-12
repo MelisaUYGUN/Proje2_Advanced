@@ -53,11 +53,11 @@ public class Common2Arrays {
         // koda burdan basla
         // array1 and array2  kullan
 
-
-
  */
-
-
+        if(array1[array1.length-1] == array2[array2.length-1]){
+            System.out.println("true");
+        }else
+            System.out.println("false");
 
 
 
