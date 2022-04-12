@@ -42,7 +42,7 @@ public class sameFirstAndLast {
 
       // Koda burdan başlayin
 
-
+        System.out.println(useThisArray.length >= 1 && useThisArray[0] == useThisArray[useThisArray.length - 1 ]);
 
 
     }
