@@ -32,18 +32,47 @@ public class sumTotal {
 
 //        Koda burdan başlayın
 
-        String  arr [][] = {{"$12" , "$22" , "5$"},{"€9" , "€40" , "$1" , "$2"}, {"€12"}};
-         double toplam = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++)
-                if (arr[i][j].contains("$")) {
-                    toplam += Double.parseDouble((arr[i][j].replace("$", ""))) * 3.2;
-                } else if ((arr[i][j].contains("€"))) {
-                    toplam += Double.parseDouble((arr[i][j].replace("€", " "))) * 4.2;
+        String[][] nums = {
+
+                {"$12", "$22", "5"},
+                {"€9", "€40", "$1", "$2"},
+                {"€12"}
+        };
+
+        int total = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            for (int j = 0; j < nums[i].length; j++) {
+
+                if (nums[i][j].contains("$")) {
+
+                    String strNum = nums[i][j];
+
+                    strNum = strNum.replace("$", "");
+
+                    int intNum = Integer.parseInt(strNum);
+
+                    double doubleNum = intNum * 3.2;
+
+                    total += doubleNum;
+
+                } else if (nums[i][j].contains("€")) {
+                    String strNum = nums[i][j];
+
+                    strNum = strNum.replace("€", "");
+
+                    int intNum = Integer.parseInt(strNum);
+
+                    double doubleNum = intNum * 4.2;
+
+                    total += doubleNum;
+
                 }
 
+            }
         }
-        System.out.println("toplam :" + toplam);
+        System.out.println(total);
     }
 }
 
